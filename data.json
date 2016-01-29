@@ -1,0 +1,28 @@
+[
+	{
+		"title": "L'agriculture soit locale et respecteuse de la terre et des hommes",
+		"subtitle": "En s'inspirant de démarches comme l'agroécologie et la permaculture...",
+		"logo":"./img/logo_leaf.gif",
+		"color":"background-image: linear-gradient(to bottom, #B0FF8E 0px, #8DF05A 100%) !important;",
+		"goals" : "<p>Parce que nos pratiques agricoles ont un impact énorme sur l'environnement et notre santé, il convient d'adopter les méthodes de production les plus respecteuse du vivant. De plus, la relocalisation de la production évite les transports inutiles et renforce le tissu social local tout en améliorant la qualité des produits et la relation de confiance entre producteur et consommateur.</p><p>La France est déjà le 2ème pays d'Europe en terme de surface agricole en Bio, allons plus loin en exigeant la totalité de la production en Bio en s'inspirant d'approche comme l'agroécologie et la permaculture qui favorise la biodiversité, l'autonomie des paysans ainsi que la qualité de l'alimentation.</p>",
+		"actions": "Souscrire à une Association pour le Maintient de l'Agriculture Paysane (AMAP) qui permettra aux producteurs prochent de chez vous d'être sûr d'écouler une partie des stocks et vous permettra de découvrir des légumes de saisons.Ou acheter sur le marché à des producteurs locaux et Bio.Tâcher d'acheter le moins possible de denrées alimentaires transformées (plat cuisinés) et éviter les supermarchés qui asphyxies les petits producteurs par des pratiques de pressions importantes sur les prix d'achat.",
+		"links":[
+			{"url":"#", "name":"Site trop bien", "desc":"Une petite description"},
+			{"url":"#", "name":"Encore un site trop bien", "desc":"Une autre petite description"}
+		],
+		"books":[
+			{"title":"Mobby Dick", "author":"Yop Yop", "desc":"Superbe bouquin"},
+			{"title":"Mobby Dick", "author":"Yop Yop", "desc":"Superbe bouquin"}
+		],
+		"videos":[
+			{
+				"html_player":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FXaD3NGRQQo?list=PLYgVyAQ6d9kkiceRF5USDg1oRimS7gCUk\" frameborder=\"0\" allowfullscreen></iframe>",
+				"desc": "Superbe vidéo"
+			},
+			{
+				"html_player":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/VjQUh5-CnZk\" frameborder=\"0\" allowfullscreen></iframe>",
+				"desc":"Autre chouette video"
+			}
+		]
+	}
+]
