@@ -22,7 +22,8 @@
 	</div>
 	</div>
 <script id="template" type="x-tmpl-mustache">
-<div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="{{color}}">
+{{#sections}}
+<div class="panel-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background-image: linear-gradient(to bottom, {{color-start}} 0px, {{color-end}} 100%) !important;">
 	<div class="media">
 	  <div class="media-left">
 	    <img src="{{logo}}">
@@ -33,7 +34,7 @@
 	  </div>
 	</div>
 </div>
-<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+<div id="collapse-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{index}}">
   <div class="panel-body">
   	<h3>Objectif</h3>
   	{{&goals}}
@@ -46,25 +47,19 @@
 			<h4>Liens</h4>
 			<ul>
 				{{#links}}
-				<li><a href="{{url}}">{{name}}</a>{{desc}}</li>
+				<li><a href="{{url}}">{{name}}</a><p><i>{{desc}}</i></p></li>
 				{{/links}}
 			</ul>
 			<h4>Lectures</h4>
 			<ul>
 				{{#books}}
-				<li>{{title}}, {{author}}. {{desc}}</li>
+				<li>{{title}}, <i>{{author}}</i>.<p><i>{{desc}}</i></p></li>
 				{{/books}}
 			</ul>
 		</div>
 		<div class="col-md-6">
 			<h4>Vidéos et Podcasts</h4>
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				</ol>
-
+			<div id="carousel-{{index}}" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					{{#videos}}
@@ -78,11 +73,11 @@
 				</div>
 
 				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<a class="left carousel-control" href="#carousel-{{index}}" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 				</a>
-				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<a class="right carousel-control" href="#carousel-{{index}}" role="button" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 				</a>
@@ -92,6 +87,7 @@
 	</p>
   </div>
 </div>
+{{/sections}}
 </script>
 </body>
 </html>
