@@ -2,6 +2,7 @@ h1 {
 	font-size: 56px;
 }
 
-.green-heading {
-	background-image: linear-gradient(to bottom, #B0FF8E 0px, #8DF05A 100%) !important;
+.section-heading{
+	margin-bottom: 5px;
+	margin-top: 5px;
 }

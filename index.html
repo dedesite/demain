@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>Demain j'aimerai que...</title>
+	<title>Demain j'aimerais que...</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./css/demain.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="page-header">
-		<h1 class="text-center"><i>Demain</i> j'aimerai que...</h1>
+		<h1 class="text-center"><i>Demain</i> j'aimerais que...</h1>
 	</div>
 	<div class="container">
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -23,7 +23,7 @@
 	</div>
 <script id="template" type="x-tmpl-mustache">
 {{#sections}}
-<div class="panel-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background-image: linear-gradient(to bottom, {{color-start}} 0px, {{color-end}} 100%) !important;">
+<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background-image: linear-gradient(to bottom, {{color-start}} 0px, {{color-end}} 100%) !important;">
 	<div class="media">
 	  <div class="media-left">
 	    <img src="{{logo}}">
@@ -36,10 +36,16 @@
 </div>
 <div id="collapse-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{index}}">
   <div class="panel-body">
-  	<h3>Objectif</h3>
+  	<h3>Problème</h3>
+  	<p>
   	{{&goals}}
-	<h3>Ce que nous pouvons faire dès maintenant</h3>
+	</p>
+	<h3>Actions individuelles</h3>
+	<p>
 	{{&actions}}
+	</p>
+	<h3>Actions collectives</h3>
+	<h3>Actions politiques</h3>
 	<p>
 	<h3>Pour aller plus loin</h3>
 	<div class="row">
@@ -88,6 +94,7 @@
   </div>
 </div>
 {{/sections}}
+</div>
 </script>
 </body>
 </html>

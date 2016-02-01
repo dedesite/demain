@@ -10,7 +10,6 @@ $(function(){
   		$('#accordion-content').html(rendered);
 		$('.carousel').carousel();
 		$('.carousel-inner').each(function(ind, el){
-			console.log(el);
 			$(el).children().first().addClass('active');
 		});
 	});
