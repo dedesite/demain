@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>Demain j'aimerais que...</title>
+	<title>Demain j'aimerais...</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./css/demain.css">
@@ -13,50 +13,61 @@
 </head>
 <body>
 	<div class="page-header">
-		<h1 class="text-center"><i>Demain</i> j'aimerais que...</h1>
+		<h1 class="text-center"><i>Demain</i> j'aimerais...</h1>
 	</div>
 	<div class="container">
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div id="accordion-content" class="panel panel-default">
+		<div class="row">
+			<div id="accordion-content" class="panel panel-default">
+			</div>
 		</div>
 	</div>
 	</div>
 <script id="template" type="x-tmpl-mustache">
 {{#sections}}
-<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background-image: linear-gradient(to bottom, {{color-start}} 0px, {{color-end}} 100%) !important;">
+<div class="col-md-3">
+<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background:{{color}};">
 	<div class="media">
 	  <div class="media-left">
 	    <img src="{{logo}}">
 	  </div>
 	  <div class="media-body">
-	    <h4 class="media-heading">{{title}}</h4>
-	    <i>{{subtitle}}</i>
+	    <h4 class="media-heading section-title">{{title}}</h4>
 	  </div>
+	</div>
+	<div class="section-subtitle">
+		<i>{{subtitle}}</i>
 	</div>
 </div>
 <div id="collapse-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{index}}">
   <div class="panel-body">
-  	<h3>Problème</h3>
+  	<h3 class="content-title">Pourquoi ?</h3>
   	<p>
   	{{&goals}}
 	</p>
-	<h3>Actions individuelles</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<h3 class="content-title">Actions individuelles  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
+			{{&actions}}
+		</div>
+		<div class="col-md-4">
+			<h3 class="content-title">Actions collectives  <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></h3>
+		</div>
+		<div class="col-md-4">
+			<h3 class="content-title">Actions politiques  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+		</div>
+	</div>
 	<p>
-	{{&actions}}
-	</p>
-	<h3>Actions collectives</h3>
-	<h3>Actions politiques</h3>
-	<p>
-	<h3>Pour aller plus loin</h3>
+	<h3 class="content-title">Pour aller plus loin</h3>
 	<div class="row">
 		<div class="col-md-6">
-			<h4>Liens</h4>
+			<h4 class="content-title">Liens  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></h4>
 			<ul>
 				{{#links}}
 				<li><a href="{{url}}">{{name}}</a><p><i>{{desc}}</i></p></li>
 				{{/links}}
 			</ul>
-			<h4>Lectures</h4>
+			<h4 class="content-title">Lectures  <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h4>
 			<ul>
 				{{#books}}
 				<li>{{title}}, <i>{{author}}</i>.<p><i>{{desc}}</i></p></li>
@@ -64,7 +75,7 @@
 			</ul>
 		</div>
 		<div class="col-md-6">
-			<h4>Vidéos et Podcasts</h4>
+			<h4 class="content-title">Vidéos et Podcasts  <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></h4>
 			<div id="carousel-{{index}}" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
@@ -93,8 +104,8 @@
 	</p>
   </div>
 </div>
-{{/sections}}
 </div>
+{{/sections}}
 </script>
 </body>
 </html>

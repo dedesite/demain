@@ -2,7 +2,26 @@ h1 {
 	font-size: 56px;
 }
 
-.section-heading{
+.section-heading {
 	margin-bottom: 5px;
 	margin-top: 5px;
+}
+
+.section-title {
+	color:white;
+	font-family: impact;
+	font-size: 20px;
+}
+
+.section-subtitle {
+	color: white;
+	background-color: rgba(127, 127, 127, 0.5);
+	margin-left: -14px;
+	margin-right: -14px;
+	margin-bottom: -10px;
+}
+
+.content-title {
+	font-family: impact;
+	text-align: center;
 }
