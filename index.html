@@ -16,94 +16,94 @@
 		<h1 class="text-center"><i>Demain</i> j'aimerais...</h1>
 	</div>
 	<div class="container">
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		<div class="row">
-			<div id="accordion-content" class="panel panel-default">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			</div>
 		</div>
-	</div>
 	</div>
 <script id="template" type="x-tmpl-mustache">
 {{#sections}}
 <div class="col-md-3">
-<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background:{{color}};">
-	<div class="media">
-	  <div class="media-left">
-	    <img src="{{logo}}">
-	  </div>
-	  <div class="media-body">
-	    <h4 class="media-heading section-title">{{title}}</h4>
-	  </div>
-	</div>
-	<div class="section-subtitle">
-		<i>{{subtitle}}</i>
-	</div>
-</div>
-<div id="collapse-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{index}}">
-  <div class="panel-body">
-  	<h3 class="content-title">Pourquoi ?</h3>
-  	<p>
-  	{{&goals}}
-	</p>
-	<div class="row">
-		<div class="col-md-4">
-			<h3 class="content-title">Actions individuelles  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
-			{{&actions}}
-		</div>
-		<div class="col-md-4">
-			<h3 class="content-title">Actions collectives  <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></h3>
-		</div>
-		<div class="col-md-4">
-			<h3 class="content-title">Actions politiques  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
-		</div>
-	</div>
-	<p>
-	<h3 class="content-title">Pour aller plus loin</h3>
-	<div class="row">
-		<div class="col-md-6">
-			<h4 class="content-title">Liens  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></h4>
-			<ul>
-				{{#links}}
-				<li><a href="{{url}}">{{name}}</a><p><i>{{desc}}</i></p></li>
-				{{/links}}
-			</ul>
-			<h4 class="content-title">Lectures  <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h4>
-			<ul>
-				{{#books}}
-				<li>{{title}}, <i>{{author}}</i>.<p><i>{{desc}}</i></p></li>
-				{{/books}}
-			</ul>
-		</div>
-		<div class="col-md-6">
-			<h4 class="content-title">Vidéos et Podcasts  <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></h4>
-			<div id="carousel-{{index}}" class="carousel slide" data-ride="carousel">
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					{{#videos}}
-					<div class="item">
-					  {{&html_player}}
-					  <div>
-					    {{&desc}}
-					  </div>
-					</div>
-					{{/videos}}
-				</div>
-
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-{{index}}" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-{{index}}" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-				</a>
+	<div class="panel panel-default">
+		<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background:{{color}};">
+			<div class="media">
+			  <div class="media-left">
+			    <img src="{{logo}}">
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading section-title">{{title}}</h4>
+			  </div>
+			</div>
+			<div class="section-subtitle">
+				<i>{{subtitle}}</i>
 			</div>
 		</div>
+		<div id="collapse-{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{index}}">
+		  <div class="panel-body">
+			<h3 class="content-title">Pourquoi ?</h3>
+			<p>
+			{{&goals}}
+			</p>
+			<div class="row">
+				<div class="col-md-4">
+					<h3 class="content-title">Actions individuelles  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
+					{{&actions}}
+				</div>
+				<div class="col-md-4">
+					<h3 class="content-title">Actions collectives  <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></h3>
+				</div>
+				<div class="col-md-4">
+					<h3 class="content-title">Actions politiques  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h3>
+				</div>
+			</div>
+			<p>
+			<h3 class="content-title">Pour aller plus loin</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<h4 class="content-title">Liens  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></h4>
+					<ul>
+						{{#links}}
+						<li><a href="{{url}}">{{name}}</a><p><i>{{desc}}</i></p></li>
+						{{/links}}
+					</ul>
+					<h4 class="content-title">Lectures  <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h4>
+					<ul>
+						{{#books}}
+						<li>{{title}}, <i>{{author}}</i>.<p><i>{{desc}}</i></p></li>
+						{{/books}}
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h4 class="content-title">Vidéos et Podcasts  <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></h4>
+					<div id="carousel-{{index}}" class="carousel slide" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							{{#videos}}
+							<div class="item">
+							  {{&html_player}}
+							  <div>
+							    {{&desc}}
+							  </div>
+							</div>
+							{{/videos}}
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-{{index}}" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-{{index}}" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</p>
+		  </div>
+		</div>
 	</div>
-	</p>
-  </div>
-</div>
 </div>
 {{/sections}}
 </script>
