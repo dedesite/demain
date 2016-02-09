@@ -16,15 +16,15 @@
 		<h1 class="text-center"><i>Demain</i> j'aimerais...</h1>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			</div>
+		<div class="row" id="content">
+		</div>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		</div>
 	</div>
 <script id="template" type="x-tmpl-mustache">
+<div class="col-md-4">
 {{#sections}}
-<div class="col-md-3">
-	<div class="panel panel-default">
+	<div id="section-{{index}}">
 		<div class="panel-heading section-heading" role="tab" id="heading-{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{index}}" aria-expanded="true" aria-controls="collapse-{{index}}" style="background:{{color}};">
 			<div class="media">
 			  <div class="media-left">
@@ -104,8 +104,8 @@
 		  </div>
 		</div>
 	</div>
-</div>
 {{/sections}}
+</div>
 </script>
 </body>
 </html>
